@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "ZCOOL KuaiLe", "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+.paper-texture {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0.08;
+  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+}
+
+.hand-drawn-border {
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
+.paper-card {
+  background: #fff;
+  border: 2px solid #333;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  box-shadow: 8px 8px 0px 0px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.paper-card::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border: 2px solid #333;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  z-index: -1;
+  transform: rotate(-1deg);
+  opacity: 0.3;
+}
+
+.paper-button {
+  background: #fff;
+  border: 2px solid #333;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+  transition: all 0.1s;
+}
+
+.paper-button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px 0px rgba(0,0,0,1);
+}
+
+.paper-tab {
+  border-top: 2px solid #333;
+  border-left: 2px solid #333;
+  border-right: 2px solid #333;
+  border-bottom: none;
+  border-radius: 15px 15px 0 0;
+  background: #f8f8f8;
+}
+
+.paper-tab.active {
+  background: #fff;
+  transform: translateY(-2px);
+  z-index: 10;
+}
